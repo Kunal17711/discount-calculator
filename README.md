@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Discount Calculator 🏷️
 
-## Getting Started
+A sleek, minimal, and lightning-fast single-page **Discount Calculator** built with **Next.js (App Router)** and **Tailwind CSS**. Designed with a pure black aesthetic (`#000`), subtle borders, soft white glows, and a warm yellow (`#FFD60A`) accent.
 
-First, run the development server:
+Created by **Kunal Builds** — 100% free and open source.
 
+🌐 **Live Tool:** [websitebykunalbuilds.vercel.app](https://websitebykunalbuilds.vercel.app)  
+📸 **Instagram:** [@bykunalbuilds](https://instagram.com/bykunalbuilds)  
+📂 **GitHub:** [Kunal17711/discount-calculator](https://github.com/Kunal17711/discount-calculator)
+
+---
+
+## ✨ Features
+
+- **Live Calculations (No Button Required):** Calculates instant results as you type.
+- **Double / Stacked Discounts:** Easily calculate deals like *"50% + 20% off"* accurately (shows **60%**, not 70%).
+- **Step-by-Step Breakdown:** Transparent explanation showing price after the first discount, then after the second discount.
+- **Find the Discount % (Reverse Calculator):** Enter Original Price and Sale Price to discover the discount percentage and amount saved.
+- **Quick Preset Chips:** One-click shortcuts for common discounts (`10%`, `20%`, `30%`, `50%`, `70%`).
+- **One-Click Copy Result:** Formats and copies a clean text breakdown directly to your clipboard.
+- **Indian Numbering Formatting:** Automatically formats values in Indian style (e.g. `₹1,00,000`).
+- **Input Validation:** Restricts negative numbers, limits discounts to 100%, and handles blank values gracefully without errors.
+- **SEO & Search Optimized:** Full OpenGraph tags, semantic HTML, dynamic `sitemap.xml`, `robots.txt`, and Google FAQPage Schema JSON-LD.
+- **Monetization Ready:** Includes `<head>` placeholder snippet and responsive ad slot for Google AdSense, plus compliant **Privacy Policy** and **About** pages.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router, React 19)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Language:** TypeScript
+- **Deployment:** Deploy-ready for [Vercel](https://vercel.com/)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Kunal17711/discount-calculator.git
+cd discount-calculator
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Run development server
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Build for production
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧮 How the Calculations Work
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Stacked Discount Formula
+When a store offers a primary discount $d_1\%$ and an extra discount $d_2\%$ on an original price $P$:
+1. **Price after first discount:**
+   $$P_1 = P \times \left(1 - \frac{d_1}{100}\right)$$
+2. **Final price after extra discount:**
+   $$P_2 = P_1 \times \left(1 - \frac{d_2}{100}\right) = P \times \left(1 - \frac{d_1}{100}\right) \times \left(1 - \frac{d_2}{100}\right)$$
+3. **Effective Total Discount %:**
+   $$\text{Effective } \% = \left[1 - \left(1 - \frac{d_1}{100}\right) \times \left(1 - \frac{d_2}{100}\right)\right] \times 100$$
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*Example:* On a ₹1,000 item with 50% + 20% off:
+- After 50%: ₹500
+- After extra 20% on ₹500: ₹400
+- Total saved: ₹600 (**60% effective discount**, not 70%).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. Reverse Discount Formula
+When original price $P$ and sale price $S$ are known:
+$$\text{Discount } \% = \left(\frac{P - S}{P}\right) \times 100$$
+$$\text{You Save} = P - S$$
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open-source and available under the [MIT License](LICENSE). Built with ❤️ by [Kunal Builds](https://websitebykunalbuilds.vercel.app).

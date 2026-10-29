@@ -1,6 +1,5 @@
 import DiscountCalculator from "@/components/DiscountCalculator";
 import FaqSection from "@/components/FaqSection";
-import AdPlaceholder from "@/components/AdPlaceholder";
 import { Tag } from "lucide-react";
 
 export default function HomePage() {
@@ -25,10 +24,18 @@ export default function HomePage() {
         <DiscountCalculator />
       </main>
 
-      {/* Google AdSense Placeholder Slot */}
-      <div className="w-full max-w-2xl mx-auto">
-        <AdPlaceholder slot="Under Calculator Banner" />
-      </div>
+      {/* 
+        ======================================================================
+        GOOGLE ADSENSE UNIT PLACEMENT
+        Insert your responsive Google AdSense unit snippet here when approved:
+        <ins className="adsbygoogle"
+             style={{ display: "block" }}
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        ======================================================================
+      */}
 
       {/* Semantic SEO FAQ Section with JSON-LD */}
       <FaqSection />

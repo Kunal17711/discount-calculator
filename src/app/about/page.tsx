@@ -2,11 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Sparkles, CheckCircle, ExternalLink } from "lucide-react";
 import { InstagramIcon } from "@/components/Icons";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Us | Free Discount Calculator",
   description:
     "Learn about the Discount Calculator tool, built by Kunal Builds. 100% free, private, client-side discount calculations for everyday shoppers and businesses.",
+  alternates: {
+    canonical: `${SITE_URL}/about`,
+  },
+  openGraph: {
+    title: "About Us | Free Discount Calculator",
+    description:
+      "Learn about the Discount Calculator tool, built by Kunal Builds. 100% free, private, client-side discount calculations.",
+    url: `${SITE_URL}/about`,
+    type: "website",
+  },
 };
 
 export default function AboutPage() {

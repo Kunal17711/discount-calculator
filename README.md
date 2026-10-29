@@ -4,7 +4,7 @@ A sleek, minimal, and lightning-fast single-page **Discount Calculator** built w
 
 Created by **Kunal Builds** — 100% free and open source.
 
-🌐 **Live Tool:** [websitebykunalbuilds.vercel.app](https://websitebykunalbuilds.vercel.app)  
+🌐 **Live Tool:** [discount-calculator-neon.vercel.app](https://discount-calculator-neon.vercel.app)  
 📸 **Instagram:** [@bykunalbuilds](https://instagram.com/bykunalbuilds)  
 📂 **GitHub:** [Kunal17711/discount-calculator](https://github.com/Kunal17711/discount-calculator)
 

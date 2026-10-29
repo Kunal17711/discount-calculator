@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,7 +23,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://websitebykunalbuilds.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   title: "Free Discount Calculator (Final Price, Extra Discount)",
   description:
     "Calculate final prices, instant rupee savings, and effective percentage for single or stacked discounts (like 50% + 20% off). Fast, mobile-first discount calculator with Indian numbering formatting.",
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://websitebykunalbuilds.vercel.app",
+    url: SITE_URL,
     title: "Free Discount Calculator (Final Price, Extra Discount)",
     description:
       "Calculate final price, savings, and effective percentage for single or stacked discounts (like 50% + 20% off). Simple, free, Indian Rupee formatting.",
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "/",
+    canonical: SITE_URL,
   },
 };
 

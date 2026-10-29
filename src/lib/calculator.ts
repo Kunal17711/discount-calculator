@@ -1,6 +1,4 @@
-/**
- * Utility functions for Indian currency formatting and discount calculations.
- */
+import { SITE_URL } from "./site";
 
 /**
  * Format a number into Indian style currency string (e.g. ₹1,00,000 or ₹450.50).
@@ -134,13 +132,13 @@ Original Price: ${formatIndianCurrency(p)}
 Discounts: ${formatPercent(d1)} + ${formatPercent(d2)} extra
 Final Price: ${formatIndianCurrency(finalPrice)}
 You Save: ${formatIndianCurrency(youSave)} (${formatPercent(effectiveDiscountPercent)} total off)
-Calculated via Discount Calculator (https://websitebykunalbuilds.vercel.app)`
+Calculated via Discount Calculator (${SITE_URL})`
     : `🏷️ Discount Breakdown:
 Original Price: ${formatIndianCurrency(p)}
 Discount: ${formatPercent(d1)}
 Final Price: ${formatIndianCurrency(finalPrice)}
 You Save: ${formatIndianCurrency(youSave)} (${formatPercent(effectiveDiscountPercent)} off)
-Calculated via Discount Calculator (https://websitebykunalbuilds.vercel.app)`;
+Calculated via Discount Calculator (${SITE_URL})`;
 
   return {
     originalPrice: p,
@@ -210,7 +208,7 @@ Original Price: ${formatIndianCurrency(p)}
 Sale Price: ${formatIndianCurrency(s)}
 Discount: ${formatPercent(discountPercent)}
 You Save: ${formatIndianCurrency(youSave)}
-Calculated via Discount Calculator (https://websitebykunalbuilds.vercel.app)`;
+Calculated via Discount Calculator (${SITE_URL})`;
 
   return {
     originalPrice: p,

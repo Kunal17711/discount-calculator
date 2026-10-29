@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Shield } from "lucide-react";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Discount Calculator",
   description:
     "Privacy policy for the Discount Calculator tool by Kunal Builds. Learn about how your data and cookies are handled.",
+  alternates: {
+    canonical: `${SITE_URL}/privacy`,
+  },
+  openGraph: {
+    title: "Privacy Policy | Discount Calculator",
+    description:
+      "Privacy policy for the Discount Calculator tool by Kunal Builds. Learn about how your data and cookies are handled.",
+    url: `${SITE_URL}/privacy`,
+    type: "website",
+  },
 };
 
 export default function PrivacyPolicyPage() {
@@ -39,12 +50,10 @@ export default function PrivacyPolicyPage() {
             <p>
               Welcome to <strong>Discount Calculator</strong> (available at{" "}
               <a
-                href="https://websitebykunalbuilds.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={SITE_URL}
                 className="text-[#FFD60A] hover:underline"
               >
-                Kunal Builds
+                {SITE_URL.replace("https://", "")}
               </a>
               ). We value your privacy and are committed to protecting any personal data you may encounter while using our service. Because all calculations run entirely in your browser (client-side), we do not collect, store, or sell any of your financial or numerical input data.
             </p>
@@ -108,7 +117,7 @@ export default function PrivacyPolicyPage() {
               >
                 @bykunalbuilds
               </a>{" "}
-              or through our main portal at{" "}
+              or through our portfolio at{" "}
               <a
                 href="https://websitebykunalbuilds.vercel.app"
                 target="_blank"
